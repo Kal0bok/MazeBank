@@ -48,9 +48,9 @@ public class bankss {
                 if (personasKods == null) break;
                 String smartIdKods = Metodes.ciparuParbaude("Ievadi Smart ID kodu (6 cipari)", 6);
                 if (smartIdKods == null) break;
-                double derG = Metodes.skaitlaParbaude("Ievadi derīguma termiņu gados (min 1)", 1, 10);
+                double derG = Metodes.ciparuParbaude("Ievadi derīguma termiņu gados (min 1)", 1, 10);
                 if (derG < 0) break;
-                int derigumaGadi = (int) derG; // Removed doubleValue()
+                int derigumaGadi = (int) derG; 
                 String paraksts = Metodes.virknesParbaude("Ievadi parakstu");
                 if (paraksts == null) break;
 
