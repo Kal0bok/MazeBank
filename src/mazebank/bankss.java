@@ -54,8 +54,16 @@ public class bankss {
                 String paraksts = Metodes.virknesParbaude("Ievadi parakstu");
                 if (paraksts == null) break;
 
-                
-            	break;
+                if (izvele.equals("NoreKarte")) {
+                    konti.add(new norkarte(banka, vards, uzvards, persKods, smartId,
+                    		derigGadi, paraksts));
+                    JOptionPane.showMessageDialog(null, "Veiksmīgi izveidota norēķinu karte",
+                            "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    
+                }
+                break;
+            	
             	
             case 1:
             	

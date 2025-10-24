@@ -54,8 +54,12 @@ public class Metodes {
                 JOptionPane.showMessageDialog(null,
                         "Nepareizs formāts! Vajag " + garums + " ciparus.", "Nekorekti dati",
                         JOptionPane.WARNING_MESSAGE);
+                
+                
             }
-        }
+        }   
     }
+	
+	
 
 }
