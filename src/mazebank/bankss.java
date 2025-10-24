@@ -1,6 +1,9 @@
 package mazebank;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+
+import javax.swing.JOptionPane;
 
 public class bankss {
 	
@@ -15,6 +18,72 @@ public class bankss {
                 "Kontu saraksts", "Kārtot pēc atlikuma", "Bankomāts",
                 "Aizvērt programmu"};
         ArrayList<Object> konti = new ArrayList<>();
+        
+        do {
+        	izvele = (String) JOptionPane.showInputDialog(null, "Izvēlies darbību",
+                    "Izvēlne", JOptionPane.QUESTION_MESSAGE, null
+                    , darbibas, darbibas[0]);
+            if (izvele == null) break;
+
+            izvelesID = Arrays.asList(darbibas).indexOf(izvele);
+            
+            switch(izvelesID) {
+            
+            case 0:
+            	izvele = (String) JOptionPane.showInputDialog(null, "Izvēlies kartes veidu",
+                        "Izvēlne", JOptionPane.QUESTION_MESSAGE, null
+                        , veidi, veidi[0]);
+                if (izvele == null) break;
+
+                String banka = (String) JOptionPane.showInputDialog(null, "Izvēlies banku",
+                        "Izvēlne", JOptionPane.QUESTION_MESSAGE, null
+                        , bankas, bankas[0]);
+                if (banka == null) break;
+
+                String vards = Metodes.virknesParbaude("Ievadi vārdu");
+                if (vards == null) break;
+                String uzvards = Metodes.virknesParbaude("Ievadi uzvārdu");
+                if (uzvards == null) break;
+                String personasKods = Metodes.ciparuParbaude("Ievadi personas kodu (11 cipari)", 11);
+                if (personasKods == null) break;
+                String smartIdKods = Metodes.ciparuParbaude("Ievadi Smart ID kodu (6 cipari)", 6);
+                if (smartIdKods == null) break;
+                double derG = Metodes.skaitlaParbaude("Ievadi derīguma termiņu gados (min 1)", 1, 10);
+                if (derG < 0) break;
+                int derigumaGadi = (int) derG; // Removed doubleValue()
+                String paraksts = Metodes.virknesParbaude("Ievadi parakstu");
+                if (paraksts == null) break;
+
+                
+            	break;
+            	
+            case 1:
+            	
+            	break;
+            	
+            case 2:
+            	
+            	break;
+            	
+            case 3:
+            	
+            	break;
+            	
+            case 4:
+            	
+            	break;
+            	
+            case 5:
+            	
+            	break;
+            
+            }
+            
+            
+            
+            
+            
+        }while (izvelesID != 5);
     }
 	
 }
