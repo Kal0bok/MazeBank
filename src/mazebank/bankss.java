@@ -44,13 +44,13 @@ public class bankss {
                 if (vards == null) break;
                 String uzvards = Metodes.virknesParbaude("Ievadi uzvārdu");
                 if (uzvards == null) break;
-                String personasKods = Metodes.ciparuParbaude("Ievadi personas kodu (11 cipari)", 11);
-                if (personasKods == null) break;
-                String smartIdKods = Metodes.ciparuParbaude("Ievadi Smart ID kodu (6 cipari)", 6);
-                if (smartIdKods == null) break;
-                double derG = Metodes.ciparuParbaude("Ievadi derīguma termiņu gados (min 1)", 1, 10);
+                String persKods = Metodes.ciparuParbaude("Ievadi personas kodu (11 cipari)", 11);
+                if (persKods == null) break;
+                String smartId = Metodes.ciparuParbaude("Ievadi Smart ID kodu (6 cipari)", 6);
+                if (smartId == null) break;
+                double derG = Metodes.skaitlaParbaude("Ievadi derīguma termiņu gados (min 1)", 1, 10);
                 if (derG < 0) break;
-                int derigumaGadi = (int) derG; 
+                int derigGadi = (int) derG; 
                 String paraksts = Metodes.virknesParbaude("Ievadi parakstu");
                 if (paraksts == null) break;
 
