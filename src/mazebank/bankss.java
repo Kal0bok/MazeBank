@@ -60,7 +60,11 @@ public class bankss {
                     JOptionPane.showMessageDialog(null, "Veiksmīgi izveidota norēķinu karte",
                             "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    
+                	double lim = Metodes.skaitlaParbaude("Ievadi kredīta limitu", 100, 10000);
+                    if (lim < 0) break;
+                    konti.add(new kredkarte(banka, vards, uzvards, persKods, smartId, derigGadi, paraksts, lim));
+                    JOptionPane.showMessageDialog(null, "Veiksmīgi izveidota kredītkarte",
+                            "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                 }
                 break;
             	
