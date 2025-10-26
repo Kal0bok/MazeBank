@@ -10,7 +10,6 @@ import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 
 
-
 public class bankss {
 	
 	private static final String[] bankas = {"Swedbank", "SEB", "Citadele"};
@@ -112,31 +111,31 @@ public class bankss {
             case 3:
             	if(konti.size() > 0) {
 					String atb = (String) JOptionPane.showInputDialog(null,
-							"Kārtot riteņus pēc cenas augoši?", "Izvēle",
+							"Kārtot kontus pēc atlikuma augoši?", "Izvēle",
 							JOptionPane.INFORMATION_MESSAGE, null, 
 							atbilde, atbilde[0]);
 					if(atb != null) {
 						if(atb.equals("Jā")) {
 							konti.sort(null);
 							JOptionPane.showMessageDialog(null, 
-									"Riteņi sakārtoti augoši!", "Kārtošana",
+									"Konti sakārtoti augoši!", "Kārtošana",
 									JOptionPane.INFORMATION_MESSAGE);
 						}else {
 							konti.sort(Collections.reverseOrder());
 							JOptionPane.showMessageDialog(null, 
-									"Riteņi sakārtoti dilstoši!", "Kārtošana",
+									"Konti sakārtoti dilstoši!", "Kārtošana",
 									JOptionPane.INFORMATION_MESSAGE);
 						}
 					}
 				}else {
-					JOptionPane.showMessageDialog(null, "Nav ievadīts neviens ritenis",
+					JOptionPane.showMessageDialog(null, "Nav ievadīts neviens konts",
 							"Kļūda", JOptionPane.ERROR_MESSAGE);
 					break;
 				}
 				break;
             	
             case 4:
-            	
+            	bankomats.apkalpot(konti);
             	break;
             	
             case 5:
