@@ -71,7 +71,9 @@ public class norkarte implements Comparable<norkarte> {
                 "\nAtlikums: " + atlikums + " EUR";
     }
     
-    
+    public String getPin() {
+        return pin;
+    }
     
     
     
