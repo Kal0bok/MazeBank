@@ -5,6 +5,8 @@ import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
+import banks.Metodes;
+
 
 public class bankss {
 	
@@ -69,9 +71,17 @@ public class bankss {
                 }
                 break;
             	
-            	
             case 1:
-            	
+            	if (konti.size() > 0) {
+                    int kontID = Metodes.kontaIzvele(konti);
+
+                    konti.remove(kontID);
+                    JOptionPane.showMessageDialog(null, "Veiksmīgi izdzēsts konts",
+                            "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Nav ievadīts neviens konts",
+                            "Kļūda", JOptionPane.ERROR_MESSAGE);
+                }
             	break;
             	
             case 2:
