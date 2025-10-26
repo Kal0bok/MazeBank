@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import javax.swing.JOptionPane;
 
+
 public class bankss {
 	
 	private static final String[] bankas = {"Swedbank", "SEB", "Citadele"};

@@ -1,8 +1,13 @@
 package mazebank;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
+
+import banks.norkarte;
+
 
 public class Metodes {
 	
@@ -53,13 +58,23 @@ public class Metodes {
             } else {
                 JOptionPane.showMessageDialog(null,
                         "Nepareizs formāts! Vajag " + garums + " ciparus.", "Nekorekti dati",
-                        JOptionPane.WARNING_MESSAGE);
-                
-                
-            }
-        }   
+                        JOptionPane.WARNING_MESSAGE);  
+            } 
+        }      
     }
 	
-	
+	public static int kontaIzvele(ArrayList<Object> konti) {
+        String[] kSaraksts = new String[konti.size()];
+        for (int i = 0; i < kSaraksts.length; i++) {
+            norkarte k = (norkarte) konti.get(i);
+            kSaraksts[i] = k.getBanka() + " " + k.noteiktAtlikumu() + "EUR";
+        }
 
+        String izveletais = (String) JOptionPane.showInputDialog(null,
+                "Izvēlies kontu: ", "Izvēle", JOptionPane.QUESTION_MESSAGE, null,
+                kSaraksts, kSaraksts[0]);
+
+        return Arrays.asList(kSaraksts).indexOf(izveletais);
+    }
+	
 }

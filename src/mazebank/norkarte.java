@@ -44,7 +44,17 @@ public class norkarte implements Comparable<norkarte> {
         		String.format("%013d", rand.nextLong(10000000000000L));
     }
     
+    public double noteiktAtlikumu() {
+        return atlikums;
+    }
     
+    public void depozits(double summa) {
+        atlikums += summa;
+    }
+    
+    public String getBanka() {
+        return banka;
+    }
     
     
     
