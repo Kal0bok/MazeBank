@@ -139,7 +139,8 @@ public class bankss {
             	break;
             	
             case 5:
-            	
+            	JOptionPane.showMessageDialog(null, "Programma apturēta", "Apturēta",
+                        JOptionPane.PLAIN_MESSAGE);
             	break;
             
             }
