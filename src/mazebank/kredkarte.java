@@ -1,6 +1,5 @@
 package mazebank;
 
-
 public class kredkarte extends norkarte {
     private double kreditaLimits;
 
@@ -21,4 +20,12 @@ public class kredkarte extends norkarte {
     public double getKreditaLimits() {
 		return kreditaLimits;
 	}
+    
+    public void setKreditaLimits(double kreditaLimits) {
+		this.kreditaLimits = kreditaLimits;
+	}
+    @Override
+    public String izvadit() {
+        return super.izvadit() + "\nKredīta limits: " + getKreditaLimits();
+    }
 	}

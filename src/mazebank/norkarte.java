@@ -8,8 +8,7 @@ import java.util.Random;
 
 public class norkarte implements Comparable<norkarte> {
     private String banka, vards, uzvards, personasKods, 
-    smartIdKods, paraksts, kartesNumurs, cvc, pin, kontaNumurs;
-    private int derigumaGadi;
+    smartIdKods, kartesNumurs, cvc, pin, kontaNumurs;
     private double atlikums = 0.0;
     private LocalDate izdosanasDatums = LocalDate.now();
     private LocalDate derigumaDatums;
@@ -28,8 +27,6 @@ public class norkarte implements Comparable<norkarte> {
     	this.uzvards = uzvards;
     	this.personasKods = personasKods;
     	this.smartIdKods = smartIdKods;
-    	this.derigumaGadi = derigumaGadi;
-    	this.paraksts = paraksts;
     	this.derigumaDatums = izdosanasDatums.plusYears(derigumaGadi);
     	generateRandoms();
     }
@@ -75,13 +72,22 @@ public class norkarte implements Comparable<norkarte> {
         return pin;
     }
     
+    public boolean iznemaa(double summa) {
+        if (atlikums >= summa) {
+            atlikums -= summa;
+            return true;
+        }
+        return false;
+    }
     
+    public void mainPin(String jaunsPin) {
+        pin = jaunsPin;
+    }
     
-    
-    
-    
-    
-    
+    public int compareToo(norkarte o) {
+        return Double.compare(this.atlikums, o.atlikums);
+    }
+
 	@Override
 	public int compareTo(norkarte o) {
 		return 0;

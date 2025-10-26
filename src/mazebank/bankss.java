@@ -45,9 +45,9 @@ public class bankss {
                         , bankas, bankas[0]);
                 if (banka == null) break;
 
-                String vards = Metodes.virknesParbaude("Ievadi vārdu");
+                String vards = Metodes.virkneParbaud("Ievadi vardu");
                 if (vards == null) break;
-                String uzvards = Metodes.virknesParbaude("Ievadi uzvārdu");
+                String uzvards = Metodes.virkneParbaud("Ievadi uzvārdu");
                 if (uzvards == null) break;
                 String persKods = Metodes.ciparuParbaude("Ievadi personas kodu (11 cipari)", 11);
                 if (persKods == null) break;
@@ -56,7 +56,7 @@ public class bankss {
                 double derG = Metodes.skaitlaParbaude("Ievadi derīguma termiņu gados (min 1)", 1, 10);
                 if (derG < 0) break;
                 int derigGadi = (int) derG; 
-                String paraksts = Metodes.virknesParbaude("Ievadi parakstu");
+                String paraksts = Metodes.virkneParbaud("Ievadi parakstu");
                 if (paraksts == null) break;
 
                 if (izvele.equals("NoreKarte")) {
@@ -144,11 +144,7 @@ public class bankss {
             	break;
             
             }
-            
-            
-            
-            
-            
+  
         }while (izvelesID != 5);
     }
 	
