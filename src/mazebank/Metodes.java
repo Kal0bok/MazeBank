@@ -6,8 +6,6 @@ import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
 
-import banks.norkarte;
-
 
 public class Metodes {
 	

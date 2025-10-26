@@ -1,6 +1,7 @@
 package mazebank;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -56,7 +57,19 @@ public class norkarte implements Comparable<norkarte> {
         return banka;
     }
     
-    
+    public String izvadit() {
+        return "Banka: " + banka +
+                "\nVārds: " + vards +
+                "\nUzvārds: " + uzvards +
+                "\nPersonas kods: " + personasKods +
+                "\nSmart ID kods: " + smartIdKods +
+                "\nDerīguma termiņš: " + derigumaDatums.format(DateTimeFormatter.ofPattern("MM/yy")) +
+                "\nKartes numurs: " + kartesNumurs +
+                "\nCVC: " + cvc +
+                "\nPIN: " + pin +
+                "\nKonta numurs: " + kontaNumurs +
+                "\nAtlikums: " + atlikums + " EUR";
+    }
     
     
     

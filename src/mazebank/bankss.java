@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
 
-import banks.Metodes;
 
 
 public class bankss {
@@ -85,7 +87,25 @@ public class bankss {
             	break;
             	
             case 2:
-            	
+            	if (konti.size() > 0) {
+                    String str = "Kontu skaits: " + konti.size() +
+                            "\n_________________________________\n";
+                    for (int i = 0; i < konti.size(); i++) {
+                        str += ((norkarte) konti.get(i)).izvadit() +
+                                "\n_________________________________\n";
+                    }
+
+                    JTextArea ta = new JTextArea(str, 10, 40);
+                    ta.setEditable(false);
+                    JScrollPane sp = new JScrollPane(ta);
+                    sp.setVerticalScrollBarPolicy(
+                            ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+                    JOptionPane.showMessageDialog(ta, sp, "Kontu saraksts",
+                            JOptionPane.PLAIN_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Nav ievadīts neviens konts",
+                            "Kļūda", JOptionPane.ERROR_MESSAGE);
+                }
             	break;
             	
             case 3:
