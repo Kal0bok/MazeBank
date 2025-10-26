@@ -2,6 +2,7 @@ package mazebank;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
@@ -109,8 +110,30 @@ public class bankss {
             	break;
             	
             case 3:
-            	
-            	break;
+            	if(konti.size() > 0) {
+					String atb = (String) JOptionPane.showInputDialog(null,
+							"Kārtot riteņus pēc cenas augoši?", "Izvēle",
+							JOptionPane.INFORMATION_MESSAGE, null, 
+							atbilde, atbilde[0]);
+					if(atb != null) {
+						if(atb.equals("Jā")) {
+							konti.sort(null);
+							JOptionPane.showMessageDialog(null, 
+									"Riteņi sakārtoti augoši!", "Kārtošana",
+									JOptionPane.INFORMATION_MESSAGE);
+						}else {
+							konti.sort(Collections.reverseOrder());
+							JOptionPane.showMessageDialog(null, 
+									"Riteņi sakārtoti dilstoši!", "Kārtošana",
+									JOptionPane.INFORMATION_MESSAGE);
+						}
+					}
+				}else {
+					JOptionPane.showMessageDialog(null, "Nav ievadīts neviens ritenis",
+							"Kļūda", JOptionPane.ERROR_MESSAGE);
+					break;
+				}
+				break;
             	
             case 4:
             	
