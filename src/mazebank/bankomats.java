@@ -20,14 +20,18 @@ public class bankomats {
         if (atmBanka == null) return;
 
         int izv = Metodes.kontaIzvele(konti);
+        if (izv < 0 || izv >= konti.size()) return;
         norkarte karte = (norkarte) konti.get(izv);
 
         boolean banks = karte.getBanka().equals(atmBanka);
         double komBank = banks ? 0 : 0.99;
         
 
-        String pinIev = code.bankomatsKods("PIN");
-        if (pinIev == null || pinIev.isEmpty() || !pinIev.equals(karte.getPin())) {
+        String pinIev = code.bankomatsKods("PIN", konti, izv); 
+        if (pinIev == null) {
+            return; 
+        }
+        if (pinIev.isEmpty() || !pinIev.equals(karte.getPin())) {
             JOptionPane.showMessageDialog(null, "Nepareizs PIN!", "Kļūda", JOptionPane.ERROR_MESSAGE);
             return;
         }
