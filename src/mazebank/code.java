@@ -96,14 +96,19 @@ public class code {
                     result = displayText.toString();
                     frame.dispose();
                 } else if (text.equals("Dzēst")) {
-                    result = displayText.toString();
+                    if (displayText.length() > 0) {
+                        displayText.deleteCharAt(displayText.length() - 1);
+                        displayLabel.setText(displayText.toString());
+                    }
+                } else if (text.equals("Nespied")) {
+                    JOptionPane.showMessageDialog(null, "Es tev teicu, lai nespiež. Malacis, tev vairs nav kartes)", "Bankomāts", JOptionPane.INFORMATION_MESSAGE);
+                    result = null;
                     frame.dispose();
-                }else if (text.equals("Nespied")) {
-                    result = displayText.toString();
-                    frame.dispose();
-                }else if (text.equals("Cancel")) {
+                } else if (text.equals("Cancel")) {
+                    JOptionPane.showMessageDialog(null, "Neaizmirstiet savu karti", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
+                    result = null;
                     displayText.setLength(0);
-                    displayLabel.setText(" ");
+                    frame.dispose();
                 }
             }
         });
