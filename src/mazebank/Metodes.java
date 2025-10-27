@@ -9,14 +9,22 @@ import javax.swing.JOptionPane;
 public class Metodes {
 	
 	public static String virkneParbaud(String zinojums) {
-        String virkne;
-        do {
-            virkne = JOptionPane.showInputDialog(zinojums);
-            if (virkne == null)
-                return null;
-        } while (!Pattern.matches("^[\\p{L} .]+$", virkne));
-        return virkne;
-    }
+	    String virkne;
+	    while (true) {
+	        virkne = JOptionPane.showInputDialog(null, zinojums,
+	                "Datu ievade", JOptionPane.INFORMATION_MESSAGE);
+	        if (virkne == null) {
+	            return null; 
+	        }
+	        if (Pattern.matches("^[\\p{L} .]+$", virkne)) {
+	            return virkne; 
+	        } else {
+	            JOptionPane.showMessageDialog(null,
+	                    "Nepareizs formāts! Ievadiet tikai burtus un atstarpes.", 
+	                    "Nekorekti dati", JOptionPane.WARNING_MESSAGE);
+	        }
+	    }
+	}
 	
 	public static Double skaitlaParbaude(String zinojums, double min, double max) {
         String ievade;
@@ -54,7 +62,24 @@ public class Metodes {
                 return ievade;
             } else {
                 JOptionPane.showMessageDialog(null,
-                        "Nepareizs formāts! Vajag " + garums + " ciparus.", "Nekorekti dati",
+                        "Nepareizs formāts! Vajag tikai ciparus!", "Nekorekti dati",
+                        JOptionPane.WARNING_MESSAGE);  
+            } 
+        }      
+    }
+	
+	public static String ciparuParbaudee(String zinojums, int garums) {
+        String ievade;
+        while (true) {
+            ievade = JOptionPane.showInputDialog(null, zinojums,
+                    "Datu ievade", JOptionPane.INFORMATION_MESSAGE);
+            if (ievade == null)
+                return null;
+            if (Pattern.matches("^[0-9]{6}-[0-9]{5}$", ievade)) {
+                return ievade;
+            } else {
+                JOptionPane.showMessageDialog(null,
+                		"Nepareizs formāts! Vajag tikai ciparus!", "Nekorekti dati",
                         JOptionPane.WARNING_MESSAGE);  
             } 
         }      

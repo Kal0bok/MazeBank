@@ -13,7 +13,7 @@ import javax.swing.ScrollPaneConstants;
 public class bankss {
 	
 	private static final String[] bankas = {"Swedbank", "SEB", "Citadele"};
-    private static final String[] veidi = {"NoreKarte", "KredKarte"};
+    private static final String[] veidi = {"Norēķinu karte", "Kredītkarte"};
     private static final String[] atbilde = {"Jā", "Nē"};
 
     public static void main(String[] args) {
@@ -49,9 +49,9 @@ public class bankss {
                 if (vards == null) break;
                 String uzvards = Metodes.virkneParbaud("Ievadi uzvārdu");
                 if (uzvards == null) break;
-                String persKods = Metodes.ciparuParbaude("Ievadi personas kodu (11 cipari)", 11);
+                String persKods = Metodes.ciparuParbaudee(("Ievadi personas kodu (123456-12345)"), 11);
                 if (persKods == null) break;
-                String smartId = Metodes.ciparuParbaude("Ievadi Smart ID kodu (6 cipari)", 6);
+                String smartId = Metodes.ciparuParbaude("Ievadi Smart ID kodu (5 cipari)", 5);
                 if (smartId == null) break;
                 double derG = Metodes.skaitlaParbaude("Ievadi derīguma termiņu gados (min 1)", 1, 10);
                 if (derG < 0) break;
