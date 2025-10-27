@@ -26,15 +26,25 @@ public class bankomats {
         boolean banks = karte.getBanka().equals(atmBanka);
         double komBank = banks ? 0 : 0.99;
         
-
+        int i = 0;
+        do {
         String pinIev = code.bankomatsKods("PIN", konti, izv); 
         if (pinIev == null) {
             return; 
         }
         if (pinIev.isEmpty() || !pinIev.equals(karte.getPin())) {
-            JOptionPane.showMessageDialog(null, "Nepareizs PIN!", "Kļūda", JOptionPane.ERROR_MESSAGE);
-            return;
+            i++;
+            if (i < 3) {
+                JOptionPane.showMessageDialog(null, "Nepareizs PIN! Mēģinājumi atlikuši: " + (3 - i), "Kļūda", JOptionPane.ERROR_MESSAGE);
+            } else {
+                konti.remove(izv); 
+                JOptionPane.showMessageDialog(null, "Tava karte ir izdzesta!!!", "Kļūda", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+        } else {
+            break;
         }
+    } while (i < 3);
         
         String izvele;
         int izvelesID;
@@ -54,7 +64,7 @@ public class bankomats {
                 case 0: 
                     double maxIzn = karte.noteiktAtlikumu();
                     if (karte instanceof kredkarte) {
-                        maxIzn += ((kredkarte) karte).getKreditaLimits(); // Assuming kreditaLimits is accessible
+                        maxIzn += ((kredkarte) karte).getKreditaLimits(); 
                     }
                     double summa = Metodes.skaitlaParbaude("Cik izņemt?", 0.01, maxIzn);
                     if (summa < 0) break;
