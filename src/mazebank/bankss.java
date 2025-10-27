@@ -135,7 +135,7 @@ public class bankss {
 				break;
             	
             case 4:
-            	bankomats.apkalpot(konti);
+            	bankomats.apkalpo(konti);
             	break;
             	
             case 5:
