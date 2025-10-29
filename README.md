@@ -8,7 +8,7 @@ Java programmēšanas valodā izstrādātā programmatūras projekta sākotnēj�
 - [x] Programmā ieviest galveno izvēlni ❗️
 - [x] Izveidot noreķinu karti 💳
 - [x] Konta atvēršana 🏛
-- [ ] Valūtas maiņa 💱
+- [x] Valūtas maiņa 💱
 - [x] Naudas pārskaitījumi 🏛 
 	- [x] Izveidot kredīt karti 💳
 	- [x] Izveidot bankomatu 🏧
