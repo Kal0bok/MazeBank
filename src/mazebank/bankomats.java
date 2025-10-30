@@ -88,8 +88,9 @@ public class bankomats {
                     JOptionPane.showMessageDialog(null, "Atlikums: " + karte.noteiktAtlikumu() + " EUR", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                     break;
                 case 3: 
-                    String jaunsPin = Metodes.ciparuParbaude("Ievadi jauno PIN (4 cipari)", 4);
-                    if (jaunsPin != null) {
+                	String jaunsPin = code.bankomatsKods("PIN", konti, izv); 
+
+                    if (jaunsPin != null || jaunsPin.length() == 4) {
                         karte.mainPin(jaunsPin);
                         JOptionPane.showMessageDialog(null, "PIN nomainīts", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                     }
