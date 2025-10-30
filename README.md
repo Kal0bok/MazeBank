@@ -15,7 +15,7 @@ Java programmēšanas valodā izstrādātā programmatūras projekta sākotnēj�
 	- [x] Noņemt naudu 🎰
  	- [x] Paskatīties kartas kodu 💳
 	- [x] Paskatīties konta atlikumu 🏧
-	- [ ] Skaņas 🎼
+	- [ ] Skaņas 🎵
 	- [ ] Kartot sarakstu 💰
 	- [ ] Bankomata vizualizācija 🎰
  	- [ ] Paņemt ipoteku 💰
