@@ -1,10 +1,29 @@
 package mazebank;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
 
 public class code {
     private static JLabel displayLabel;
@@ -80,6 +99,24 @@ public class code {
         }
         return result;
     }
+    
+    public static void pressButton() {
+        try {
+            File soundFile = new File("sound" + File.separator + "puk.wav");
+            AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
+            Clip clip = AudioSystem.getClip();
+            clip.open(ais);
+            clip.start();
+            clip.addLineListener(event -> {
+                if (event.getType() == javax.sound.sampled.LineEvent.Type.STOP) {
+                    clip.close();
+                }
+            });
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            JOptionPane.showMessageDialog(null, "Kļūda atskaņojot skaņu: " + e.getMessage(), "Kļūda", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
 
     private static JButton createButton(String text, Dimension size, ArrayList<Object> konti, int izv) {
         JButton button = new JButton(text);
@@ -88,6 +125,7 @@ public class code {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	pressButton();
                 if (text.matches("[0-9]")) {
                     if (displayText.length() < (action.equals("PIN") ? 4 : 10)) {
                         displayText.append(text);
