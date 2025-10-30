@@ -85,7 +85,7 @@ public class Metodes {
         }      
     }
 	
-	public static int kontaIzvele(ArrayList<Object> konti) {
+	public static int kontaIzvele(ArrayList<norkarte> konti) {
         String[] kSaraksts = new String[konti.size()];
         for (int i = 0; i < kSaraksts.length; i++) {
             norkarte k = (norkarte) konti.get(i);

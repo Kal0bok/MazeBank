@@ -84,12 +84,8 @@ public class norkarte implements Comparable<norkarte> {
         pin = jaunsPin;
     }
     
-    public int compareToo(norkarte o) {
+    @Override
+    public int compareTo(norkarte o) {
         return Double.compare(this.atlikums, o.atlikums);
     }
-
-	@Override
-	public int compareTo(norkarte o) {
-		return 0;
-	}
 }

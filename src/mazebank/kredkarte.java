@@ -7,9 +7,10 @@ public class kredkarte extends norkarte {
     		String personasKods,String smartIdKods,
                      int derigumaGadi, String paraksts, double kreditaLimits) {
         super(banka, vards, uzvards, personasKods, smartIdKods, derigumaGadi, paraksts);
+        this.kreditaLimits = kreditaLimits;
     }
-
-    public boolean iznema(double summa) {
+    @Override
+    public boolean iznemaa(double summa) {
         if (noteiktAtlikumu() + getKreditaLimits() >= summa) {
             depozits(-summa);
             return true;

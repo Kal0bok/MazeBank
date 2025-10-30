@@ -9,7 +9,7 @@ public class bankomats {
 
 	private static final String[] bankas = {"Swedbank", "SEB", "Citadele"};
 
-    public static void apkalpo(ArrayList<Object> konti) {
+    public static void apkalpo(ArrayList<norkarte> konti) {
         if (konti.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Nav neviena konta", "Kļūda", JOptionPane.ERROR_MESSAGE);
             return;
@@ -90,7 +90,7 @@ public class bankomats {
                 case 3: 
                 	String jaunsPin = code.bankomatsKods("PIN", konti, izv); 
 
-                    if (jaunsPin != null && jaunsPin.length() == 4) {
+                    if (jaunsPin != null || jaunsPin.length() == 4) {
                         karte.mainPin(jaunsPin);
                         JOptionPane.showMessageDialog(null, "PIN nomainīts", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                     }

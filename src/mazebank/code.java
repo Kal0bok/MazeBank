@@ -31,7 +31,7 @@ public class code {
     private static String result;
     private static JFrame frame;
 
-    public static String bankomatsKods(String actionType, ArrayList<Object> konti, int izv) {
+    public static String bankomatsKods(String actionType, ArrayList<norkarte> konti, int izv) {
         action = actionType;
         result = null;
         displayText.setLength(0);
@@ -185,7 +185,7 @@ public class code {
     }
 
 
-    private static JButton createButton(String text, Dimension size, ArrayList<Object> konti, int izv) {
+    private static JButton createButton(String text, Dimension size, ArrayList<norkarte> konti, int izv) {
         JButton button = new JButton(text);
         button.setPreferredSize(size);
         button.setFont(new Font("Arial", Font.BOLD, 18));

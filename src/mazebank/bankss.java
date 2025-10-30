@@ -22,7 +22,7 @@ public class bankss {
         String[] darbibas = {"Jauns konts", "Noņemt kontu",
                 "Kontu saraksts", "Kārtot pēc atlikuma", "Bankomāts",
                 "Aizvērt programmu"};
-        ArrayList<Object> konti = new ArrayList<>();
+        ArrayList<norkarte> konti = new ArrayList<>();
         
         do {
         	izvele = (String) JOptionPane.showInputDialog(null, "Izvēlies darbību",
@@ -76,7 +76,7 @@ public class bankss {
             case 1:
             	if (konti.size() > 0) {
                     int kontID = Metodes.kontaIzvele(konti);
-
+                    if (kontID >= 0) {
                     konti.remove(kontID);
                     JOptionPane.showMessageDialog(null, "Veiksmīgi izdzēsts konts",
                             "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
@@ -84,6 +84,7 @@ public class bankss {
                     JOptionPane.showMessageDialog(null, "Nav ievadīts neviens konts",
                             "Kļūda", JOptionPane.ERROR_MESSAGE);
                 }
+            }
             	break;
             	
             case 2:
