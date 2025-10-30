@@ -99,10 +99,78 @@ public class code {
         }
         return result;
     }
-    
+    //1
     public static void pressButton() {
         try {
+            File soundFile = new File("sound" + File.separator + "kras.wav");
+            AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
+            Clip clip = AudioSystem.getClip();
+            clip.open(ais);
+            clip.start();
+            clip.addLineListener(event -> {
+                if (event.getType() == javax.sound.sampled.LineEvent.Type.STOP) {
+                    clip.close();
+                }
+            });
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            JOptionPane.showMessageDialog(null, "Kļūda atskaņojot skaņu: " + e.getMessage(), "Kļūda", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    //2
+    public static void pressButtonspec() {
+        try {
             File soundFile = new File("sound" + File.separator + "puk.wav");
+            AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
+            Clip clip = AudioSystem.getClip();
+            clip.open(ais);
+            clip.start();
+            clip.addLineListener(event -> {
+                if (event.getType() == javax.sound.sampled.LineEvent.Type.STOP) {
+                    clip.close();
+                }
+            });
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            JOptionPane.showMessageDialog(null, "Kļūda atskaņojot skaņu: " + e.getMessage(), "Kļūda", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    //3
+    public static void pressButtonspeci() {
+        try {
+            File soundFile = new File("sound" + File.separator + "knopka.wav");
+            AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
+            Clip clip = AudioSystem.getClip();
+            clip.open(ais);
+            clip.start();
+            clip.addLineListener(event -> {
+                if (event.getType() == javax.sound.sampled.LineEvent.Type.STOP) {
+                    clip.close();
+                }
+            });
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            JOptionPane.showMessageDialog(null, "Kļūda atskaņojot skaņu: " + e.getMessage(), "Kļūda", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    //4
+    public static void pressButtonsp() {
+        try {
+            File soundFile = new File("sound" + File.separator + "pukpuk.wav");
+            AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
+            Clip clip = AudioSystem.getClip();
+            clip.open(ais);
+            clip.start();
+            clip.addLineListener(event -> {
+                if (event.getType() == javax.sound.sampled.LineEvent.Type.STOP) {
+                    clip.close();
+                }
+            });
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            JOptionPane.showMessageDialog(null, "Kļūda atskaņojot skaņu: " + e.getMessage(), "Kļūda", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    //5
+    public static void pressButtonspecc() {
+        try {
+            File soundFile = new File("sound" + File.separator + "canc.wav");
             AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip();
             clip.open(ais);
@@ -125,8 +193,8 @@ public class code {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	pressButton();
                 if (text.matches("[0-9]")) {
+                	pressButton();
                     if (displayText.length() < (action.equals("PIN") ? 4 : 10)) {
                         displayText.append(text);
                         displayLabel.setText(displayText.toString());
@@ -134,21 +202,25 @@ public class code {
                 } else if (text.equals("Enter")) {
                     result = displayText.toString();
                     frame.dispose();
+                    pressButtonspeci();
                 } else if (text.equals("Dzēst")) {
                     if (displayText.length() > 0) {
                         displayText.deleteCharAt(displayText.length() - 1);
                         displayLabel.setText(displayText.toString());
+                        pressButtonsp();
                     }
                 } else if (text.equals("Nespied")) {
                     JOptionPane.showMessageDialog(null, "Es tev teicu, lai nespiež. Malacis, tev vairs nav kartes)", "Bankomāts", JOptionPane.INFORMATION_MESSAGE);
                     konti.remove(izv);
                     result = null;
                     frame.dispose();
+                    pressButtonspec();
                 } else if (text.equals("Cancel")) {
                     JOptionPane.showMessageDialog(null, "Neaizmirstiet savu karti", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                     result = null;
                     displayText.setLength(0);
                     frame.dispose();
+                    pressButtonspecc();
                 }
             }
         });
