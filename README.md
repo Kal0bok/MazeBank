@@ -8,7 +8,6 @@ Java programmēšanas valodā izstrādātā programmatūras projekta sākotnēj�
 - [x] Programmā ieviest galveno izvēlni ❗️
 - [x] Izveidot noreķinu karti 💳
 - [x] Konta atvēršana 🏛
-- [x] Valūtas maiņa 💱
 - [x] Naudas pārskaitījumi 🏛 
 	- [x] Izveidot kredīt karti 💳
 	- [x] Izveidot bankomatu 🏧
@@ -16,7 +15,7 @@ Java programmēšanas valodā izstrādātā programmatūras projekta sākotnēj�
 	- [x] Noņemt naudu 🎰
  	- [x] Paskatīties kartas kodu 💳
 	- [x] Paskatīties konta atlikumu 🏧
-	- [ ] Bankas operacijas 🏛
-	- [ ] Bankas palidzība 🏛
-	- [ ] Paņemt kredītu 🎰
+	- [ ] Skaņas 🎼
+	- [ ] Kartot sarakstu 💰
+	- [ ] Bankomata vizualizācija 🎰
  	- [ ] Paņemt ipoteku 💰
