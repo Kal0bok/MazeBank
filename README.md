@@ -1,5 +1,5 @@
 # Banka projekts🤑🤑🤑
-Java programmēšanas valodā izstrādātā programmatūras projekta sākotnējā versija. Nelielā programma kas izveidota lai veikt operacijas ar banku, bankomatu, kredīkarti un noreķinu karti. Balstoties uz iepriekš definētu naudu un to skaitu. Ir izvedota iespēja paņemt kredītu un ipotēku. Var veikt dažadas operācījas ar bankomatu un pašu banku. Viss ir izdarīts caur JOptionPane, viss ir klikšķinams un ar visu var darboties. 💤 💤 💤
+Java programmēšanas valodā izstrādātā programmatūras projekta sākotnējā versija. Nelielā programma kas izveidota lai veikt operacijas ar banku, bankomatu, kredīkarti un noreķinu karti. Balstoties uz iepriekš definētu naudu un to skaitu. Ir izvedota iespēja paņemt kredītu un ipotēku. Var veikt dažadas operācījas ar bankomatu un pašu banku. Viss ir izdarīts caur JOptionPane, viss ir klikšķinams un ar visu var darboties. Un vēl ir uztaisīta bankomata vizualizācija. 💤 💤 💤
 
 **Darāmo darbu saraksts** 🧾
 - [x] Izstrādāt projekta sākotnējo versiju (viena klase, bez metodēm) ❗️
