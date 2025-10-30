@@ -19,3 +19,5 @@ Java programmēšanas valodā izstrādātā programmatūras projekta sākotnēj�
 	- [x] Kartot sarakstu 💰
 	- [x] Bankomata vizualizācija 🏧
  	- [x] Mainīt pinkodu 🔐
+    - [x] Interesanta darbība ar bankomatu ❓❓❓
+    - [x] Skaista darbības vizualizācija un skaņa 🔥🔥🔥
