@@ -3,19 +3,19 @@ Java programmēšanas valodā izstrādātā programmatūras projekta sākotnēj�
 
 **Darāmo darbu saraksts** 🧾
 - [x] Izstrādāt projekta sākotnējo versiju (viena klase, bez metodēm) ❗️
-- [ ] Programmas kods izdalīts metodēs ❗️
-- [ ] Programmas kods izdalīts atsevišķās klasēs ❗️
-- [ ] Programmā ieviest galveno izvēlni ❗️
-- [ ] Izveidot noreķinu karti 💳
-- [ ] Konta atvēršana 🏛
-- [ ] Valūtas maiņa 💱
-- [ ] Naudas pārskaitījumi 🏛 
-	- [ ] Izveidot kredīt karti 💳
-	- [ ] Izveidot bankomatu 🏧
-	- [ ] Nopelnīt naudu 💵
-	- [ ] Noņemt naudu 🎰
- 	- [ ] Paskatīties kartas kodu 💳
-	- [ ] Paskatīties konta atlikumu 🏧
+- [x] Programmas kods izdalīts metodēs ❗️
+- [x] Programmas kods izdalīts atsevišķās klasēs ❗️
+- [x] Programmā ieviest galveno izvēlni ❗️
+- [x] Izveidot noreķinu karti 💳
+- [x] Konta atvēršana 🏛
+- [x] Valūtas maiņa 💱
+- [x] Naudas pārskaitījumi 🏛 
+	- [x] Izveidot kredīt karti 💳
+	- [x] Izveidot bankomatu 🏧
+	- [x] Nopelnīt naudu 💵
+	- [x] Noņemt naudu 🎰
+ 	- [x] Paskatīties kartas kodu 💳
+	- [x] Paskatīties konta atlikumu 🏧
 	- [ ] Bankas operacijas 🏛
 	- [ ] Bankas palidzība 🏛
 	- [ ] Paņemt kredītu 🎰
