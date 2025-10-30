@@ -59,7 +59,7 @@ public class bankss {
                 String paraksts = Metodes.virkneParbaud("Ievadi parakstu");
                 if (paraksts == null) break;
 
-                if (izvele.equals("NoreKarte")) {
+                if (izvele.equals("Norēķinu karte")) {
                     konti.add(new norkarte(banka, vards, uzvards, persKods, smartId,
                     		derigGadi, paraksts));
                     JOptionPane.showMessageDialog(null, "Veiksmīgi izveidota norēķinu karte",
@@ -116,12 +116,12 @@ public class bankss {
 							atbilde, atbilde[0]);
 					if(atb != null) {
 						if(atb.equals("Jā")) {
-							konti.sort(null);
+							 Collections.sort(konti);
 							JOptionPane.showMessageDialog(null, 
 									"Konti sakārtoti augoši!", "Kārtošana",
 									JOptionPane.INFORMATION_MESSAGE);
 						}else {
-							konti.sort(Collections.reverseOrder());
+							Collections.sort(konti, Collections.reverseOrder());
 							JOptionPane.showMessageDialog(null, 
 									"Konti sakārtoti dilstoši!", "Kārtošana",
 									JOptionPane.INFORMATION_MESSAGE);

@@ -90,7 +90,7 @@ public class bankomats {
                 case 3: 
                 	String jaunsPin = code.bankomatsKods("PIN", konti, izv); 
 
-                    if (jaunsPin != null || jaunsPin.length() == 4) {
+                    if (jaunsPin != null && jaunsPin.length() == 4) {
                         karte.mainPin(jaunsPin);
                         JOptionPane.showMessageDialog(null, "PIN nomainīts", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                     }
