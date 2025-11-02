@@ -55,8 +55,7 @@ public class norkarte implements Comparable<norkarte> {
     }
     
     public String izvadit() {
-        return "Karte: " + veidi +
-        		"Banka: " + banka +
+        return 	"Banka: " + banka +
                 "\nVārds: " + vards +
                 "\nUzvārds: " + uzvards +
                 "\nPersonas kods: " + personasKods +

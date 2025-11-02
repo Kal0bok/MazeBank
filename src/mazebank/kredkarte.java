@@ -29,4 +29,5 @@ public class kredkarte extends norkarte {
     public String izvadit() {
         return super.izvadit() + "\nKredīta limits: " + getKreditaLimits();
     }
+   
 	}

@@ -91,9 +91,12 @@ public class bankss {
             	if (konti.size() > 0) {
                     String str = "Kontu skaits: " + konti.size() +
                             "\n_________________________________\n";
-                    for (int i = 0; i < konti.size(); i++) {
-                        str += ((norkarte) konti.get(i)).izvadit() +
-                                "\n_________________________________\n";
+                    
+                    for (norkarte karte : konti) {
+                        String veids = (karte instanceof kredkarte) ? "Kredītkarte" : "Norēķinu karte";
+                        str += "Kartes veids: " + veids + "\n";
+                        str += karte.izvadit() + "\n";
+                        str += "_________________________________\n";
                     }
 
                     JTextArea ta = new JTextArea(str, 10, 40);
