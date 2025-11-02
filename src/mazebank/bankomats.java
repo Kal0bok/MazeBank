@@ -48,7 +48,7 @@ public class bankomats {
         
         String izvele;
         int izvelesID;
-        String[] darbibas = {"Izņemt naudu", "Pielikt naudu", "Apskatīt atlikumu", "Mainīt PIN", "Valūtas maiņa", "Atcelt"};
+        String[] darbibas = {"Izņemt naudu", "Pielikt naudu", "Apskatīt atlikumu", "Mainīt PIN", "Atcelt"};
 
         do {
             izvele = (String) JOptionPane.showInputDialog(null, "Izvēlies darbību",
@@ -94,11 +94,8 @@ public class bankomats {
                         karte.mainPin(jaunsPin);
                         JOptionPane.showMessageDialog(null, "PIN nomainīts", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                     }
-                    break;
+                    break;       
                 case 4: 
-                    JOptionPane.showMessageDialog(null, "Valūtas maiņa nav implementēta", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
-                    break;
-                case 5: 
                     JOptionPane.showMessageDialog(null, "Neaizmirsti savu karti!", "Paziņojums", JOptionPane.INFORMATION_MESSAGE);
                     break;
             }
