@@ -93,7 +93,12 @@ public class bankss {
                             "\n_________________________________\n";
                     
                     for (norkarte karte : konti) {
-                        String veids = (karte instanceof kredkarte) ? "Kredītkarte" : "Norēķinu karte";
+                    	String veids;
+                    	if (karte instanceof kredkarte) {
+                    	    veids = "Kredītkarte";
+                    	} else {
+                    	    veids = "Norēķinu karte";
+                    	}
                         str += "Kartes veids: " + veids + "\n";
                         str += karte.izvadit() + "\n";
                         str += "_________________________________\n";
